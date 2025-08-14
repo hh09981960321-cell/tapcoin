@@ -1,46 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>تپ‌تپ کوین</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TapCoin</title>
   <style>
     body {
-      background: black;
-      color: white;
-      text-align: center;
       font-family: sans-serif;
-      padding-top: 100px;
-    }
-    #score {
-      font-size: 40px;
-      margin-bottom: 20px;
-      color: gold;
-    }
-    button {
-      font-size: 30px;
+      text-align: center;
+      background: #f4f4f4;
       padding: 20px;
-      background: orange;
-      border: none;
-      border-radius: 10px;
+      direction: rtl;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 15px;
+      background: #0088cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #006699;
     }
   </style>
 </head>
 <body>
-  <div id="score">0</div>
-  <button onclick="tap()">تپ کن!</button>
 
-  <script>
-    let score = localStorage.getItem("score") || 0;
-    document.getElementById("score").textContent = score;
+  <h1>به TapCoin خوش آمدید 🪙</h1>
+  <p>برای دیدن پست تلگرام، روی دکمه زیر کلیک کنید:</p>
 
-    function tap() {
-      score++;
-      document.getElementById("score").textContent = score;
-      localStorage.setItem("score", score);
-      if (navigator.vibrate) navigator.vibrate(50);
-    }
-  </script>
+  <a href="https://t.me/tapcoin/1" target="_blank">
+    مشاهده پست در تلگرام 📲
+  </a>
+
 </body>
 </html>
