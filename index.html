@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>تپ‌تپ کوین</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    body {
+      background: black;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+      padding-top: 100px;
+    }
+    #score {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: gold;
+    }
+    button {
+      font-size: 30px;
+      padding: 20px;
+      background: orange;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="score">0</div>
+  <button onclick="tap()">تپ کن!</button>
+
+  <script>
+    let score = localStorage.getItem("score") || 0;
+    document.getElementById("score").textContent = score;
+
+    function tap() {
+      score++;
+      document.getElementById("score").textContent = score;
+      localStorage.setItem("score", score);
+      if (navigator.vibrate) navigator.vibrate(50);
+    }
+  </script>
+</body>
+</html>
